@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
-const PostCard = ({ file, title, description, onEdit, onDelete, edit }) => {
+const PostCard = ({ file, title, description, onEdit, onDelete }) => {
+  // const [posts, setPosts] = useState(() => {
+  //   const stored = localStorage.getItem("posts");
+  //   return stored ? JSON.parse(stored) : [];
+  // });
+  // console.log(posts)
   return (
     <div className="bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden w-72 hover:scale-105 transition flex flex-col justify-between">
-
       <div className="h-40 w-full bg-zinc-700">
         {file ? (
           <img
@@ -43,7 +47,6 @@ const PostCard = ({ file, title, description, onEdit, onDelete, edit }) => {
           Delete
         </button>
       </div>
-
     </div>
   );
 };
